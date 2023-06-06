@@ -1,0 +1,48 @@
+    CONDICOES
+
+if(condicao){
+    true
+}
+else{
+    false
+}
+
+    Tipos de condicao
+
+        Condicao Simples
+            -Nao tem 'else'
+
+        Condicao Composta
+            -Tem 'else'
+
+        Condicao Aninhada
+            -Condicao dentro de outra condicao Composta
+
+            if(cond1){
+                bloco1
+            }else{
+                if(cond2){
+                    bloco2
+                }else{
+                    bloco3
+                }
+            }
+
+        Condicao Multipla
+            -Varias condicoes e nao apenas 2
+            -Eh preciso o uso do break no final de cada case pois ele para o codigo
+
+            switch(expressao){
+                case valor1:
+
+                    break
+                case valor2:
+
+                    break
+                case valor3:
+
+                    break
+                default:
+
+                    break
+            }

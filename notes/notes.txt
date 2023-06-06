@@ -1,0 +1,121 @@
+      /*Java Script*/
+
+      variaveis = var
+        Pode comecar com letra, $ ou _
+        Nao pode comecar com numero
+        Pode ter letras e numeros
+        Pode usar acentos e simbolos
+        Nao pode ter espaco
+        Nao podem ser palavras reservadas do JavaScript
+
+
+      Data types
+        number
+        string
+        boolean
+        null
+        undefined
+        object
+        function   
+
+
+      Conversao de variaveis
+
+        String to Number:
+          Number.parseInt()
+          Number.parseFloat()
+          Number()
+
+        Number to String:
+          String()
+
+
+      Formatando Strings
+        var s = 'JavaScript'
+        'Eu estou aprendendo s' //Nao faz interpolacao
+        'Eu estou aprendendo' + s //Usa contatenacao
+        `Eu estou aprendendo ${s}` //Usa Template String 
+
+        s.lenght //quantos caracteres a string tem
+        s.toUpperCase() //muda tudo para 'MAIUSCULAS'
+        s.toLowerCase() //muda tudo para 'minusculas'
+
+
+      Formatando Numeros
+        var n1 = 1542.5
+        n1.toFixed(2) //coloca duas casas depois da virgula
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) //transforma um numero em formato monetario
+
+
+      Operadores Aritimeticos
+        + = adicao
+        - = subtracao
+        * = multiplicacao
+        / = divisao
+        % = resto
+        ** = potencia
+
+
+      Ordem de precedencia
+        ()
+        **
+        * / %
+        + -
+
+        >, <, >=, <=, ==, !=
+
+        !
+        &&
+        ||
+
+
+    Atribuicao Simples
+        var a = 5 + 3           (8)
+        var b = a % 5           (3)
+        var c = 5 * b ** 2      (45)
+        var d = 10 - a / 2      (6)
+        var e = 6 * 2 / d       (2)
+        var f = b % e + 4 / e   (3)
+
+    
+    Auto-atribuicoes
+        var n = 3   (3)
+        n = n + 4   (7)
+        n = n - 5   (2)
+        n = n * 4   (8)
+        n = n / 2   (4)
+        n = n ** 2  (16)
+        n = n % 5   (1)
+
+        Simplificando
+            n += 4
+            n -+ 5
+            n *= 4
+            n /= 2
+            n **= 2
+            n %= 5
+        
+        Operadores de Incremento
+            x++
+            x--
+
+
+    Operadores Relacionais
+        > = maior
+        < = menor
+        >= maior ou igual
+        <= menor ou igual
+        == igual
+        != diferente
+
+        === mesmo valor e tipo
+
+    
+    Operadores Logicos
+        ! negacao
+        && conjuncao (e)
+        || disjuncao (ou)
+
+    
+    Operador Ternario
+        teste ? true : false

@@ -1,0 +1,8 @@
+FUNCOES
+
+function nome-da-acao(parametros){
+
+}
+
+
+a.addEventListener("click", clicar);
