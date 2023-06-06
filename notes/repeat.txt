@@ -1,0 +1,21 @@
+//Repeticao com Teste Logico no Inicio
+while(condicao){
+    
+}
+
+//Repeticao com Teste Logico no Final
+do{
+
+}while(condicao)
+
+//Repeticao com Variavel de Controle
+for(inicio; teste; incr){
+
+}
+
+
+function comerPizza(){
+    while(temFatia()){
+    comerFatia()
+    }
+}
