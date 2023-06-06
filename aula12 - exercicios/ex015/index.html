@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Horas</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Title</h1>
+      <h1>Title</h1>
     </header>
     <main>
-        <section>
-            <div>
-                <p>testing</p>
-            </div>
-            <div>
-                <p>testing</p>
-            </div>
-        </section>
+      <section>
+        <div>
+          <label for="nasc">Ano de Nascimento:</label>
+          <input type="number" name="nasc" id="nasc" required /> <br />
+          <p>
+            Sexo:
+            <input type="radio" name="radsex" id="masc" checked />
+            <label for="masc">Masculino</label>
+            <input type="radio" name="radsex" id="fem" />
+            <label for="fem">Feminino</label>
+          </p>
+          <p><input type="button" value="Verificar" onclick="verify()" /></p>
+        </div>
+        <div id="res">
+          <!-- <img src="images/h-adulto.jpg" alt="Perfil" id="img"> -->
+        </div>
+      </section>
     </main>
     <footer>
-        <p>&copy; gabrieL</p>
+      <p>&copy; gabrieL</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
