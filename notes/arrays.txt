@@ -1,0 +1,30 @@
+Variaveis Compostas (Vetor ou Array)
+    -Um Array eh uma variavel que recebe varios elementos. Cada elemento tem o seu valor e sua propria chave de identificacao
+
+    let num = [    ,   ,   ]
+                 0   1   2 (Indice chave)
+
+
+//Para adicionar um numero no array, basta usar 1 de 2 comandos 
+
+    num[3] = 10 //adiciona um numero em uma chave especifica
+
+    ou
+
+    num.push(10) //adiciona um numero na proxima chave
+
+//Para saber o comprimento do array, use o comandos
+
+    num.length
+
+//Para saber a chave onde se encontra um elemento, use o comandos
+
+    num.indexOf(elemento)
+
+//Para colocar os elementos em ordem crescente, use o comandos
+
+    num.sort()
+
+//Repeticao especifica para arrays
+
+    for(let nome-da-variavel in nome-do-array)

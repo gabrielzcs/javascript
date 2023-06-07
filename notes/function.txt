@@ -1,8 +1,20 @@
 FUNCOES
 
-function nome-da-acao(parametros){
+function nome-da-acao(){
 
 }
 
+function acao(parametros){
+    return res
+}
+acao(5) //chamada
+
 
 a.addEventListener("click", clicar);
+
+
+if(num % 2 == 0){
+    return 'par'
+}else{
+    return 'impar'
+}
