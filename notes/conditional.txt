@@ -1,6 +1,6 @@
     CONDICOES
 
-if(condicao){
+if(condicao //pode se usar o ! como sinal de 'nao'){
     true
 }
 else{
