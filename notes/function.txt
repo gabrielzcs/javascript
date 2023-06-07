@@ -1,8 +1,13 @@
 FUNCOES
 
+    //Funcao Simples
+
 function nome-da-acao(){
 
 }
+
+
+    //Funcao Composta
 
 function acao(parametros){
     return res
@@ -10,11 +15,22 @@ function acao(parametros){
 acao(5) //chamada
 
 
-a.addEventListener("click", clicar);
+    //Funcao dentro de Variavel
 
-
-if(num % 2 == 0){
-    return 'par'
-}else{
-    return 'impar'
+let f = function(x){
+    return x*2
 }
+f(5)
+
+    //Recursividade (chamando a funcao dentro dela mesma)
+
+function fatorial(n){
+    if(n==1){
+        return 1
+    }else{
+        return n * fatorial(n-1)
+    }
+}
+
+
+a.addEventListener("click", clicar);
