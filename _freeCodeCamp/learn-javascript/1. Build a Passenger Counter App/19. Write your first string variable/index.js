@@ -1,4 +1,8 @@
-let username = 'per"
+let username = 'per'
 
-console.log(username)
+let message = 'You have tree new messages'
+
+let messageToUser = message + ', ' + username
+
+console.log(messageToUser)
 
