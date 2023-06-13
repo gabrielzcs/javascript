@@ -1,4 +1,50 @@
-html, body {
-    margin: 0;
-    padding: 0;
+/* @charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Condensed", sans-serif;
 }
+
+body {
+  background: url(images/station.jpg) no-repeat center center/ cover;
+  height: 100vh;
+}
+
+div#container {
+  margin: auto;
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.people {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.count {
+  text-align: center;
+  font-size: 3em;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+button {
+  padding: 8px;
+  width: 150px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3em;
+} */
