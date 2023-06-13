@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(../images/water.jpg) no-repeat center center/ cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 490px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  box-shadow: 0 0 3px;
+}
+
+.timer {
+  font-size: 72px;
+  text-align: center;
+  margin: 0px auto;
+  padding: 25px;
+}
+
+.btns {
+  text-align: center;
+}
+
+button{
+    font-size: 1.5em;
+    padding: 8px 15px;
+    border: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+
+#play{
+    background-color: green;
+}
+#pause{
+    background-color: orange;
+}
+#reset{
+    background-color: red;
+}

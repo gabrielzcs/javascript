@@ -1,76 +1,86 @@
-//VARIABLES FOR TIME VALUES
+//BUTTONS VARIAVBLES
 
-let [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
-let timeRef = document.querySelector(".timer");
-let int = null;
+const startStopBtn = document.querySelector("#startStopBtn");
+const resetBtn = document.querySelector("#resetBtn");
 
-//EVENT LISTNERS
+// Time Variables
 
-document.getElementById("play").addEventListener("click", () => {
-  if (int !== null) {
-    clearInterval(int);
-  }
-  int = setInterval(displayTimer, 10);
-});
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
 
-document.getElementById("pause").addEventListener("click", () => {
-  clearInterval(int);
-});
+// Leading 0 Variables
 
-document.getElementById("reset").addEventListener("click", () => {
-  clearInterval(int);
-  [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
-  timeRef.innerHTML = "00 : 00 : 00 : 000";
-});
+let leadingSeconds = 0;
+let leadingMinutes = 0;
+let leadingHours = 0;
 
-function displayTimer() {
-  milliseconds += 10;
-  if (milliseconds == 1000) {
-    milliseconds = 0
-    seconds++;
-    if (seconds == 60) {
-      seconds = 0;
-      minutes++;
-      if (minutes == 60) {
-        minutes = 0;
-        hours++;
-      }
+// set Interval and timerStatus Variables
+
+let timerInterval = null;
+let timerStatus = "stopped";
+
+// Stop Watch Function
+
+function stopWatch() {
+  seconds++;
+
+  if (seconds / 60 === 1) {
+    seconds = 0;
+    minutes++;
+
+    if (minutes / 60 === 1) {
+      minutes = 0;
+      hours++;
     }
   }
-  let h = hours < 10 ? "0" + hours : hours;
-  let m = minutes < 10 ? "0" + minutes : minutes;
-  let s = seconds < 10 ? "0" + seconds : seconds;
-  let ms =
-    milliseconds < 10
-      ? "00" + milliseconds
-      : milliseconds < 100
-      ? "0" + milliseconds
-      : milliseconds;
-  timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
+
+  //   Seconds
+  if (seconds < 10) {
+    leadingSeconds = "0" + seconds.toString();
+  } else {
+    leadingSeconds = seconds;
+  }
+
+  //   Minutes
+  if (minutes < 10) {
+    leadingMinutes = "0" + minutes.toString();
+  } else {
+    leadingMinutes = minutes;
+  }
+
+  //   Hours
+  if (hours < 10) {
+    leadingHours = "0" + hours.toString();
+  } else {
+    leadingHours = hours;
+  }
+
+  let displayTimer = (document.getElementById("timer").innerText =
+    leadingHours + ":" + leadingMinutes + ":" + leadingSeconds);
 }
-//STOP WATCH FUNCTION
 
-// function stopWatch() {
-//   sec++;
+startStopBtn.addEventListener("click", function () {
+  if (timerStatus === "stopped") {
+    timerInterval = window.setInterval(stopWatch, 1000);
+    document.getElementById(
+      "startStopBtn"
+    ).innerHTML = `<i class="fa-solid fa-pause" id="pause"></i>`;
+    timerStatus = "started";
+  } else {
+    window.clearInterval(timerInterval);
+    document.getElementById(
+      "startStopBtn"
+    ).innerHTML = `<i class="fa-solid fa-play" id="play"</i>`;
+    timerStatus = stopped;
+  }
+});
 
-//   if (sec / 60 === 1) {
-//     sec = 0;
-//     min++;
+resetBtn.addEventListener("click", function () {
+  window.clearInterval(timerInterval);
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
 
-//     if (min / 60 === 1) {
-//       min = 0;
-//       hour++;
-//     }
-//   }
-//   let displayTimer = document.getElementById("timer");
-//   displayTimer.innerHTML = hour + ":" + min + ":" + sec;
-// }
-
-// resertBtn.addEventListener("click", function () {
-//   window.clearInterval(timerInterval);
-//   sec = 0;
-//   min = 0;
-//   hour = 0;
-
-//   document.getElementById("timer").innerHTML = "00:00:00";
-// });
+  document.getElementById("timer").innerHTML = "00:00:00";
+});
