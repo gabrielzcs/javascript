@@ -19,6 +19,7 @@ h1 {
 each other when they are rendered out vertically */
 button {
     color: #016f32;
+    margin-top: 10px;
     width: 150px;
     background: goldenrod;
     padding-top: 5px;

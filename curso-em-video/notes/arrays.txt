@@ -13,6 +13,10 @@ Variaveis Compostas (Vetor ou Array)
 
     num.push(10) //adiciona um numero na proxima chave
 
+//Para remover um numero do array, use o comando:
+
+    array-name.pop()
+
 //Para saber o comprimento do array, use o comandos
 
     num.length

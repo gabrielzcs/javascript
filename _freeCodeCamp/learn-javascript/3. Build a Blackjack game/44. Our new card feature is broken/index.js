@@ -42,6 +42,8 @@ function renderGame() {
     } else {
         message = "You're out of the game!"
         isAlive = false
+        sum = 0
+        cards = []
     }
     messageEl.textContent = message
 }
